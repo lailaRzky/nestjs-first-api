@@ -48,19 +48,20 @@ Server berjalan di: http://localhost:3000
 ```
 
 ## Struktur Proyek
+```
 nestjs-first-api/
 ├── src/
 │   ├── products/
 │   │   ├── products.module.ts
 │   │   ├── products.controller.ts
-│   │   ├── products.service.ts
+│   │   └── products.service.ts
 │   ├── users/
 │   │   ├── users.module.ts
 │   │   ├── users.controller.ts
-│   │   ├── users.service.ts
+│   │   └── users.service.ts
 │   ├── app.module.ts
 │   ├── app.controller.ts
 │   ├── app.service.ts
 │   └── main.ts
-├── package.json
-└── nest-cli.json
+└── package.json
+```

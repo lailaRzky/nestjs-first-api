@@ -24,6 +24,8 @@ Server berjalan di: http://localhost:3000
 ## Kategori Produk
 - `Aksesoris`
 - `Elektronik`
+- `Audio`
+
 
 
 ## Contoh POST /products

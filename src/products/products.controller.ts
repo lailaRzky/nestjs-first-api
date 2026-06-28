@@ -15,13 +15,13 @@ import { ProductsService, Product } from './products.service';
 export class ProductsController {
   constructor(private readonly productsService: ProductsService) {}
 
-  // GET /products/available  ← harus SEBELUM :id agar tidak tertangkap sebagai id
+
   @Get('available')
   findAvailable(): Product[] {
     return this.productsService.findAvailable();
   }
 
-  // GET /products/category/:category
+
   @Get('category/:category')
   findByCategory(
     @Param('category') category: string,
@@ -33,13 +33,12 @@ export class ProductsController {
     return results;
   }
 
-  // GET /products
   @Get()
   findAll(): Product[] {
     return this.productsService.findAll();
   }
 
-  // GET /products/:id
+ 
   @Get(':id')
   findOne(@Param('id') id: string): Product | { message: string } {
     const product = this.productsService.findOne(parseInt(id));
@@ -49,7 +48,7 @@ export class ProductsController {
     return product;
   }
 
-  // POST /products
+ 
   @Post()
   @HttpCode(HttpStatus.CREATED)
   create(
@@ -64,7 +63,7 @@ export class ProductsController {
     return this.productsService.create(body);
   }
 
-  // PUT /products/:id
+
   @Put(':id')
   update(
     @Param('id') id: string,
@@ -77,7 +76,7 @@ export class ProductsController {
     return updated;
   }
 
-  // DELETE /products/:id
+ 
   @Delete(':id')
   delete(@Param('id') id: string): { message: string } {
     const deleted = this.productsService.delete(parseInt(id));
